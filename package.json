@@ -1,0 +1,31 @@
+{
+	"name": "automated-ui-testing-kms-lighhouse-website-playwright",
+	"version": "1.0.1",
+	"author": "Mladen Jovanovi",
+	"description": "E2E UI Tests using Playwright",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"keywords": [
+		"automated-testing",
+		"UI testing",
+		"E2E testing",
+		"Playwright"
+	],
+	"dependencies": {
+		"@playwright/test": "^1.22.2",
+		"cross-env": "7.0.3",
+		"playwright": "^1.22.2",
+		"prettier": "2.5.1",
+		"typescript": "^4.7.2"
+	},
+	"scripts": {
+		"tests": "cross-env browser=$npm_config_browser playwright test"
+	},
+	"devDependencies": {
+		"@types/jest": "^29.5.5",
+		"@types/mocha": "^10.0.2",
+		"@types/node": "^22.15.29"
+	}
+}
