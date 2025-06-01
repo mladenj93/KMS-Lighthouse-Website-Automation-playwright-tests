@@ -2,23 +2,18 @@
 
 KMS Lighthouse framework for end to end UI automation tests with Playwright and TypeScript
 
-## Test cases
+## Test Cases
 
-+ Test Case 1: Validate 'Book a Demo' Link Navigation  -  defined in document
-+ Test Case 2: Validate Default State of Accessibility Toggles  -  defined in document
-+ Test Case 3: Verify that an ad for a QA Automation engineer exists:
-<br>
-- Open Careers page
-<br>
-- Verify that the user is on the careers page
-<br>
-- Verify that an ad for QA Automation exists
-<br>
-+ Test Case 4: Verify the filters on the resource page:
-<br>
-- Open Blog page
-<br>
-- Verify that every filter gives good results
+- **Test Case 1:** Validate 'Book a Demo' Link Navigation — defined in document
+- **Test Case 2:** Validate Default State of Accessibility Toggles — defined in document
+- **Test Case 3:** Verify that an ad for a QA Automation engineer exists:
+  - Open Careers page  
+  - Verify that the user is on the careers page  
+  - Verify that an ad for QA Automation exists  
+- **Test Case 4:** Verify the filters on the resource page:
+  - Open Blog page  
+  - Verify that every filter gives good results
+
 
 
 ## Getting Started
