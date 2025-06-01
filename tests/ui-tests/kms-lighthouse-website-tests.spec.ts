@@ -6,6 +6,8 @@ import DemoSteps from '../../services/Steps/demo.steps';
 import * as testData from '../../test-data/test-data.json'
 import CareersPage from '../../services/Pages/careers.page';
 import CareersSteps from '../../services/Steps/careers.steps';
+import ResourcesPage from '../../services/Pages/resources.page';
+import ResourcesSteps from '../../services/Steps/resources.steps';
 
 
 test.describe('KMS Lighthouse website - Automation tests', () => {
@@ -15,6 +17,8 @@ test.describe('KMS Lighthouse website - Automation tests', () => {
   let demoSteps: DemoSteps;
   let careersPage: CareersPage;
   let careersSteps: CareersSteps;
+  let resourcesPage: ResourcesPage;
+  let resourcesSteps: ResourcesSteps;
 
   test.beforeEach(async ({ page }) => {
     dashboardPage = new DashboardPage(page);
@@ -23,6 +27,9 @@ test.describe('KMS Lighthouse website - Automation tests', () => {
     demoSteps = new DemoSteps(page, demoPage);
     careersPage = new CareersPage(page);
     careersSteps = new CareersSteps(page, careersPage);
+    resourcesPage = new ResourcesPage(page);
+    resourcesSteps = new ResourcesSteps(page, resourcesPage);
+
 
     await page.goto('/', {
       waitUntil: 'networkidle'
@@ -70,5 +77,12 @@ test.describe('KMS Lighthouse website - Automation tests', () => {
     await dashboardSteps.clickOnCareersBtn();
     await expect(page).toHaveURL(hrefOfCareersBtn);
     expect(await careersSteps.isAdsByTitleVisible(testData.careersPage.adTitleForAQA)).toBeTruthy();
+  });
+
+  test(`Test Case 4: Verify the filters on the resource page`, async ({ page }) => {
+
+    await dashboardSteps.clickOnResourcesBtn();
+    await dashboardSteps.clickOnBlogBtn();
+    expect(await resourcesSteps.isFilterGiveGoodResults()).toBeTruthy();
   });
 })

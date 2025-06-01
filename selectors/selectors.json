@@ -4,6 +4,8 @@
     "acwpToolbarBtn": "#acwp-toolbar-btn",
     "aboutBtn": "//li/a[text()='About']",
     "careersBtn": "//li[contains(@class, 'nav-dropdown')]/a[contains(@href, 'careers')]",
+    "resourcesBtn": "//li[contains(@class, 'nav-list')]/a[contains(@href, 'resources')]",
+    "blogBtn": "//li[contains(@class, 'nav-dropdown')]/a[contains(@href, 'blog')]",
     "listOfWidgetToggles": "//div[contains(@class, 'acwp-toggler')]/label"
   },
   "demoPage": {
@@ -18,5 +20,9 @@
   },
   "careersPage": {
     "listOfAds": "//article/header/a/h3"
+  },
+  "resourcesPage": {
+    "listOfFilter": "//nav[@aria-label='Menu']/ul/li[contains(@class, 'menu-item')]/a",
+    "listOfResultsByFilter": "//div[@data-elementor-type='loop-item']"
   }
 }

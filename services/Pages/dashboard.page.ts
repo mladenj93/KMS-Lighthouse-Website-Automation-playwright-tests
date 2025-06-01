@@ -17,8 +17,16 @@ export default class DashboardPage {
     return this.page.locator(selectors.dashboardPage.aboutBtn);
   }
 
+  public getResourcesBtn(): Locator {
+    return this.page.locator(selectors.dashboardPage.resourcesBtn);
+  }
+
   public getCareersBtn(): Locator {
     return this.page.locator(selectors.dashboardPage.careersBtn);
+  }
+
+  public getBlogBtn(): Locator {
+    return this.page.locator(selectors.dashboardPage.blogBtn);
   }
 
   public getAcwpToolbarBtn(): Locator {

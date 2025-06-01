@@ -26,6 +26,14 @@ export default class DashboardSteps {
     await this.dashboardPage.getCareersBtn().click();
   }
 
+  async clickOnResourcesBtn() {
+    await this.dashboardPage.getResourcesBtn().click();
+  }
+
+  async clickOnBlogBtn() {
+    await this.dashboardPage.getBlogBtn().click();
+  }
+
   async clickOnToggleByText(toogleName: string) {
     for (let i = 0; i < await this.dashboardPage.getListOfWidgetToggles().count(); i++) {
       const toggleText: string = await this.dashboardPage.getListOfWidgetToggles().nth(i).locator('//span').textContent();
