@@ -4,5 +4,8 @@
     "contrastToogle": "Contrast",
     "dyslexiaFriendlyFont": "Readable Font",
     "highlightLinks": "Highlight Links & Buttons"
+  },
+  "careersPage": {
+    "adTitleForAQA": "QA Automation"
   }
 }

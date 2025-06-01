@@ -13,6 +13,14 @@ export default class DashboardPage {
     return this.page.locator(selectors.dashboardPage.bookADemoBtn);
   }
 
+  public getAboutBtn(): Locator {
+    return this.page.locator(selectors.dashboardPage.aboutBtn);
+  }
+
+  public getCareersBtn(): Locator {
+    return this.page.locator(selectors.dashboardPage.careersBtn);
+  }
+
   public getAcwpToolbarBtn(): Locator {
     return this.page.locator(selectors.dashboardPage.acwpToolbarBtn);
   }

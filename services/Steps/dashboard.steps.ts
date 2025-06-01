@@ -18,6 +18,14 @@ export default class DashboardSteps {
     await this.dashboardPage.getAcwpToolbarBtn().click();
   }
 
+  async clickOnAboutBtn() {
+    await this.dashboardPage.getAboutBtn().click();
+  }
+
+  async clickOnCareersBtn() {
+    await this.dashboardPage.getCareersBtn().click();
+  }
+
   async clickOnToggleByText(toogleName: string) {
     for (let i = 0; i < await this.dashboardPage.getListOfWidgetToggles().count(); i++) {
       const toggleText: string = await this.dashboardPage.getListOfWidgetToggles().nth(i).locator('//span').textContent();
@@ -29,6 +37,10 @@ export default class DashboardSteps {
 
   async hrefOfDemoABookBtn(): Promise<string> {
     return this.dashboardPage.getBookADemoBtn().getAttribute('href');
+  }
+
+  async hrefOfCareersBtn(): Promise<string> {
+    return this.dashboardPage.getCareersBtn().getAttribute('href');
   }
 
   async isDemoABookBtnVisible(): Promise<boolean> {

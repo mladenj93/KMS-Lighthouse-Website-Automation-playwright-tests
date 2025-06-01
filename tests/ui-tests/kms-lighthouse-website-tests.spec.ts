@@ -4,6 +4,8 @@ import DashboardSteps from '../../services/Steps/dashboard.steps';
 import DemoPage from '../../services/Pages/demo.page';
 import DemoSteps from '../../services/Steps/demo.steps';
 import * as testData from '../../test-data/test-data.json'
+import CareersPage from '../../services/Pages/careers.page';
+import CareersSteps from '../../services/Steps/careers.steps';
 
 
 test.describe('KMS Lighthouse website - Automation tests', () => {
@@ -11,12 +13,16 @@ test.describe('KMS Lighthouse website - Automation tests', () => {
   let dashboardSteps: DashboardSteps;
   let demoPage: DemoPage;
   let demoSteps: DemoSteps;
+  let careersPage: CareersPage;
+  let careersSteps: CareersSteps;
 
   test.beforeEach(async ({ page }) => {
     dashboardPage = new DashboardPage(page);
     dashboardSteps = new DashboardSteps(page, dashboardPage);
     demoPage = new DemoPage(page);
     demoSteps = new DemoSteps(page, demoPage);
+    careersPage = new CareersPage(page);
+    careersSteps = new CareersSteps(page, careersPage);
 
     await page.goto('/', {
       waitUntil: 'networkidle'
@@ -55,5 +61,14 @@ test.describe('KMS Lighthouse website - Automation tests', () => {
 
     await dashboardSteps.clickOnToggleByText(testData.dasboardPage.contrastToogle);
     expect(await dashboardSteps.isCheckedToogle(testData.dasboardPage.contrastToogle)).toBe(contrastToggleDefaultState);
+  });
+
+  test(`Test Case 3: Verify that an ad for a QA Automation engineer exists`, async ({ page }) => {
+
+    await dashboardSteps.clickOnAboutBtn();
+    const hrefOfCareersBtn: string = await dashboardSteps.hrefOfCareersBtn();
+    await dashboardSteps.clickOnCareersBtn();
+    await expect(page).toHaveURL(hrefOfCareersBtn);
+    expect(await careersSteps.isAdsByTitleVisible(testData.careersPage.adTitleForAQA)).toBeTruthy();
   });
 })
