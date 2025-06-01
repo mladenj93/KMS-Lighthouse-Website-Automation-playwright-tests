@@ -1,3 +1,17 @@
 {
-
+  "dashboardPage": {
+    "bookADemoBtn": "//div/a[contains(@href, 'book-a-demo') and contains(@class, 'header_panel__button')]",
+    "acwpToolbarBtn": "#acwp-toolbar-btn",
+    "listOfWidgetToggles": "//div[contains(@class, 'acwp-toggler')]/label"
+  },
+  "demoPage": {
+    "firstNameInput": "//input[@name='firstname']",
+    "lastNameInput": "//input[@name='lastname']",
+    "profesionalEmailInput": "//input[@name='email']",
+    "phoneNumberInput": "//input[@name='phone']",
+    "jobTitleInput": "//input[@name='jobtitle']",
+    "countryRegionBtn": "//select[@name='country']",
+    "messageInput": "//textarea[@name='message']",
+    "bookADemoBtn": "//input[@value='Book a demo' and @type='submit']"
+  }
 }

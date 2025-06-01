@@ -1,3 +1,8 @@
 {
-
+  "dasboardPage": {
+    "biggerText": "Increase Text",
+    "contrastToogle": "Contrast",
+    "dyslexiaFriendlyFont": "Readable Font",
+    "highlightLinks": "Highlight Links & Buttons"
+  }
 }
